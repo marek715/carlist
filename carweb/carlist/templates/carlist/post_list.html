@@ -1,0 +1,28 @@
+{% extends "carlist/base.html" %}
+
+{% block content %}
+<div class="centerstage">
+
+<div class="next-nav">
+{% for post in post_list %}
+<div class="box">
+  <div class="box-hover">
+      <p>SOLD!</p>
+  </div>
+
+  <div class="box-image"><img src="http://st.motortrend.com/uploads/sites/10/2016/05/2016-honda-civic-lx-coupe-angular-rear.png" />
+    <a href="/news/2011/08/treating-disease-birth-tippi-mackenzie-md" target="_blank"><span></span></a>
+    </div>
+  <div class="box-text"><span>{{post.car_make}} {{post.car_model}}</span></div>
+<div class="box-text"><span>Price: {{post.car_price}} </span></div>
+<div class="box-text"><span>Lease: {{post.car_lease}}/month</span></div>
+<div class="box-text"> poster: {{post.author}}</span></div>
+
+
+</div>
+
+{% endfor %}
+</div>
+
+
+{% endblock %}
